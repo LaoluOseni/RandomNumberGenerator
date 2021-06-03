@@ -9,13 +9,21 @@
 <body>
     <form method="GET">
         <h1>Put in a minimum and maximum value</h1>
-        <label for="minValue">
-            Minimum Value
-            <input required type="number" name ='minValue' id="minValue">
+        <label for="numAmount">
+            How many numbers?
+            <input required type="number" name ='numAmount' id="numAmount">
         </label>
         <label for="maxValue">
             Maximum Value
             <input required type="number" name='maxValue' id='maxValue'>
+        </label><br>
+        <label for="draws">
+            How many draws?
+            <input 
+            style="margin-top: 5px;" 
+            required type="number" 
+            name="draws" 
+            id="draws">
         </label>
         <button type="submit">Draw</button>
     </form>
