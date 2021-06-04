@@ -9,14 +9,15 @@ app.get('/', (req, res) => {
     if (Object.keys(req.query).length !== 0) {
         const queryObject = req.query;
         console.log(queryObject);
-        const { numAmount, draws, maxValue } = queryObject;
-        // console.log(req.query); //min and max
-        let random = rng.generateRandomNumber(maxValue);
-        let results = rng.numberCount(numAmount, maxValue, draws);
-        console.log(results);
+        const { maxValue, numLength, draws, } = queryObject;
+        //console.log(req.query); //min and max
+        let newFinal = rng.randomLength(numLength, maxValue, draws);
+        console.log(newFinal);
+        let results = rng.numberCount(numLength, maxValue, draws);
+        //console.log(results); 
         //console.log(random);
         res.send(
-            results
+            newFinal
         );
     } else {
         res.render('index');
